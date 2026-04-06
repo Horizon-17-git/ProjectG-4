@@ -35,7 +35,7 @@ body {
   font-weight: 900;
   box-shadow: 0 10px 30px black;
   margin-bottom: 40px;
-  animation: fadeUp 0.5s ease forwards;
+  animation: fadeUp 0.9s ease forwards;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -59,7 +59,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
-animation: fadeUp 0.5s ease forwards;
+animation: fadeUp 0.9s ease forwards;
   background-color: rgb(3, 13, 71);
   
 }
