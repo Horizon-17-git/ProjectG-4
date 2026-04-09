@@ -16,7 +16,6 @@ body {
   padding: 90px 0;
 }
 
-
 .inner-wrapper {
   display: flex;
   flex-direction: column;
@@ -36,8 +35,9 @@ body {
   box-shadow: 0 10px 30px black;
   margin-bottom: 40px;
   animation: fadeUp 0.9s ease forwards;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 
 .card-wrapper {
@@ -57,19 +57,22 @@ body {
   align-items: center;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
-animation: fadeUp 0.9s ease forwards;
+  animation: fadeUp 0.9s ease forwards;
   background-color: rgb(3, 13, 71);
-  
+  transition: box-shadow 0.9s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+
   box-shadow: 0 0 20px aqua;
-
+  transform: translateY(-10px);
 }
-
+.card:active {
+  box-shadow: 0 10px 25px rgba(231, 10, 10, 0.986);
+}
 
 .profile-img {
   width: 100px;
@@ -82,8 +85,10 @@ animation: fadeUp 0.9s ease forwards;
 .card h2 {
   margin: 15px 0;
   font-size: 39px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: brown;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(184, 40, 40);
 }
 
 .card p {
@@ -94,14 +99,18 @@ animation: fadeUp 0.9s ease forwards;
 }
 
 .icons {
-  margin-top: auto;
+  display: inline-block; 
+  animation: iconPulse 3s infinite ease-in-out;
+  color:aqua;
 }
+
 
 .icons a {
   margin: 10px;
   font-size: 24px;
   color: #9caeaf;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .icons a:hover {
@@ -110,13 +119,19 @@ animation: fadeUp 0.9s ease forwards;
 }
 
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(0, 123, 255, 0));
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    transform: scale(1.1); /* Subtle grow */
+    filter: drop-shadow(0 0 8px rgba(0, 123, 255, 0.6)); /* Soft glow */
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(0, 123, 255, 0));
   }
 }
+
+
